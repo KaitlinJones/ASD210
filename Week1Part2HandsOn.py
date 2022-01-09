@@ -22,15 +22,18 @@ print("The object's kenetic energy calculates to ", keneticEnergy, "joules.")
 
 print("\nProgram to calulate and employee's weekly salary: ")
 
+# Take input from user
 payRate = float(input("\nPlease enter your hourly pay rate:  "))
 hours = float(input("Please enter your regular hours worked:  "))
 overTime = float(input("Please enter you ovetime hours worked:  "))
 
+# Caculations 
 regPay = hours * payRate 
 overTimeRate = 1.5 * payRate
 overTimePay = overTimeRate * overTime
 totalPay = regPay + overTimePay
 
+# Output
 print("\nYour regular pay is: $", round(regPay, 2))
 print("\nYour overtime pay is: $", round(overTimePay, 2))
 print("\nYour total pay is: $", round(totalPay, 2))
