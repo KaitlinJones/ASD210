@@ -3,7 +3,7 @@ Week 1 Part 2 Hands On
 Kaitlin Jones
 1/7/22
 """
-
+"""
 # Page 62 project 6
 
 print("Program to calculate an object's momentum and kenetic energy.\n")
@@ -38,4 +38,17 @@ print("\nYour regular pay is: $", round(regPay, 2))
 print("\nYour overtime pay is: $", round(overTimePay, 2))
 print("\nYour total pay is: $", round(totalPay, 2))
 
+"""
+# Page 100 Project 8
 
+# Take input from user
+smallNum =(int(input("\nPlease enter a number: ")))
+largeNum =(int(input("\nPlease enter a number that is smaller than the first number that you entered: ")))
+
+# calculate using Euclid's algorithm
+while smallNum > 0:
+    remainder = largeNum % smallNum
+    largeNum = smallNum
+    smallNum = remainder
+
+print("The greatest common denominator is ", largeNum)
