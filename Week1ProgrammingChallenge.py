@@ -24,38 +24,63 @@ c = random.randint(1, 99)
 d = random.randint(1, 99)
 e = random.randint(1, 99)
 winningNums = [a, b, c, d, e]
+userGuesses = [0,4]
 
 print(winningNums)
 
+
+
 for count in range (5):
     count += 1
-    userGuess = int(input("Please enter your guess for lotto number " + str(count) + ":"))
+    userNum = (input("Please enter your guess for lotto number " + str(count) + ": "))
     
     for count2 in range(10):
-        count2 += 1
-        if userGuess == a:
+        if count == 1:
+            count2 += 1
+            if userNum == a:
                 print("YOU HIT THE FIRST NUMBER!")
                 break
-        elif userGuess!= a: 
-                userGuess == int(input("Take another guess:"))
-        else:
-            a == 0
-            print(a)
-
-        if userGuess == b:
+            elif count2 == maxGuesses:
+                userGuesses[0] == 0
+                break
+            else: 
+                userNum = int(input("Take another guess: "))
+        if count == 2:
+            if userNum == b:
                 print("YOU HIT THE SECOND NUMBER!")
                 break
-        elif userGuess != b: 
-                userGuess == int(input("Take another guess:"))
-        else:
-            b == 0
-            print(b)
-                
-        
-
-#if x == a:
-    pass
-
+            elif count2 == maxGuesses:
+                userGuesses[1] == 0
+                break
+            else: 
+                userNum = int(input("Take another guess: "))
+        if count == 3:
+            if userNum == c:
+                print("YOU HIT THE THIRD NUMBER!")
+                break
+            elif count2 == maxGuesses:
+                userGuesses[2] == 0
+                break
+            else: 
+                userNum = int(input("Take another guess: "))
+        if count == 4:
+            if userNum == d:
+                print("YOU HIT THE SECOND NUMBER!")
+                break
+            elif count2 == maxGuesses:
+                userGuesses[3] == 0
+                break
+            else: 
+                userNum = int(input("Take another guess: "))
+        if count == 5:
+            if userNum == e:
+                print("YOU HIT THE SECOND NUMBER!")
+                break
+            elif count2 == maxGuesses:
+                userGuesses[4] == 0
+                break
+            else: 
+                userNum = int(input("Take another guess: "))
 """
 count = 0
 while i <= 10:
@@ -69,5 +94,5 @@ while i <= 10:
         print("You've got it in", count, "tries!")
         break
 """
-
-print("The winning numbers are:", winningNums)
+print(userGuesses[0,4])
+print("The winning numbers are:", winningNums, "\nBetter luck next time!")
