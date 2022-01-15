@@ -1,2 +1,5 @@
 *.png
 *.docx
+.DS_Store
+hello.py
+notes.py
