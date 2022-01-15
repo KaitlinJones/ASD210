@@ -9,7 +9,6 @@ When all cycles completed – you should have your WINNING numbers verified and 
 
 
 import random
-from turtle import clear
 
 print("Welcome to the lucky lotto! You will have 10 chances per number to guess 5 random numbers from 1 - 99. If you guess all 5 numbers correctly you win! Miss any of the 5 and you lose. Best of luck to you!")
 x = 0
@@ -30,13 +29,14 @@ print(winningNums)
 
 
 
+
 for count in range (5):
     count += 1
     userNum = (input("Please enter your guess for lotto number " + str(count) + ": "))
     
     for count2 in range(10):
+        count2 += 1
         if count == 1:
-            count2 += 1
             if userNum == a:
                 print("YOU HIT THE FIRST NUMBER!")
                 break
@@ -65,7 +65,7 @@ for count in range (5):
                 userNum = int(input("Take another guess: "))
         if count == 4:
             if userNum == d:
-                print("YOU HIT THE SECOND NUMBER!")
+                print("YOU HIT THE FOURTH NUMBER!")
                 break
             elif count2 == maxGuesses:
                 userGuesses[3] == 0
@@ -74,25 +74,13 @@ for count in range (5):
                 userNum = int(input("Take another guess: "))
         if count == 5:
             if userNum == e:
-                print("YOU HIT THE SECOND NUMBER!")
+                print("YOU HIT THE FIFTH NUMBER!")
                 break
             elif count2 == maxGuesses:
                 userGuesses[4] == 0
                 break
             else: 
-                userNum = int(input("Take another guess: "))
-"""
-count = 0
-while i <= 10:
-    count += 1
-    userNumber = int(input("Enter your guess: "))
-    if userNumber < myNumber:
-        print("Too small")
-    elif userNumber > myNumber:
-        print("Too large")
-    else:
-        print("You've got it in", count, "tries!")
-        break
-"""
-print(userGuesses[0,4])
-print("The winning numbers are:", winningNums, "\nBetter luck next time!")
+              userNum = int(input("Take another guess: "))
+
+
+print("The winning numbers are:", winningNums, ".")
