@@ -32,13 +32,19 @@ while dollars > 0:
     #Calculate the winnings or losses
     if die1 + die2 == 7:
         dollars += 4
+        print("YOU WON!")
     else: 
         dollars -= 1 
+        print("you lost")
     #If this is a new maximum, remember it
     if dollars > maxDollars:
         maxDollars = dollars
         countAtMax = count
 # Display the results
-print("You are broke after " + str(count) + " rolls.\n" + \
-      "You should have quit after " + str(countAtMax) + \
+if count == 1:
+    print("You are broke after 1 roll.")
+else: 
+    print("You are broke after " + str(count) + " rolls.")
+      
+print("You should have quit after " + str(countAtMax) + \
       " rolls when you had $" + str(maxDollars) + ".")
