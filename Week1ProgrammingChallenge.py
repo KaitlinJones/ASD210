@@ -10,12 +10,19 @@ When all cycles completed – you should have your WINNING numbers verified and 
 
 import random
 
-print("Welcome to the lucky lotto! You will have 10 chances per number to guess 5 random numbers from 1 - 99")
-smaller = int(input("Enter the smaller number: "))
-larger = int(input("Enter the larger number: "))
-myNumber = random.randint(smaller, larger)
+print("Welcome to the lucky lotto! You will have 10 chances per number to guess 5 random numbers from 1 - 99. If you guess all 5 numbers correctly you win! Miss any of the 5 and you lose. Best of luck to you!")
+a = random.randint(1, 100)
+b = random.randint(1, 100)
+c = random.randint(1, 100)
+d = random.randint(1, 100)
+e = random.randint(1, 100)
+winningNum = [a, b, c, d, e]
+
+
+
+"""
 count = 0
-while True:
+while i < 10:
     count += 1
     userNumber = int(input("Enter your guess: "))
     if userNumber < myNumber:
@@ -25,3 +32,6 @@ while True:
     else:
         print("You've got it in", count, "tries!")
         break
+"""
+
+print("The winning numbers are:", winningNum)
