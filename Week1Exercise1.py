@@ -23,6 +23,8 @@ dollars = int(input("How many dollars do you have? "))
 maxDollars = dollars
 countAtMax = 0
 count = 0
+countWins = 0
+countLosses = 0 
 # Loop until the money is gone
 while dollars > 0:
     count += 1
@@ -32,10 +34,10 @@ while dollars > 0:
     #Calculate the winnings or losses
     if die1 + die2 == 7:
         dollars += 4
-        print("YOU WON!")
+        countWins += 1
     else: 
         dollars -= 1 
-        print("you lost")
+        countLosses += 1 
     #If this is a new maximum, remember it
     if dollars > maxDollars:
         maxDollars = dollars
@@ -45,6 +47,14 @@ if count == 1:
     print("You are broke after 1 roll.")
 else: 
     print("You are broke after " + str(count) + " rolls.")
-      
 print("You should have quit after " + str(countAtMax) + \
       " rolls when you had $" + str(maxDollars) + ".")
+# Display number of wins and losses 
+if countWins == 1:
+    print("You won 1 time.")
+else: 
+    print("You won " + str(countWins) + " times.")
+if countLosses == 1: 
+    print("You lost 1 time.")
+else: 
+    print("You lost " + str(countLosses) + " times.")
