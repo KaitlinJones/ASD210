@@ -14,17 +14,14 @@ When all cycles completed – you should have your WINNING numbers verified and 
 
 import random
 
-x = 0
 maxGuesses = 10
-count = 0
-count2 = 0 
-
-
-a = random.randint(1, 99)
-b = random.randint(1, 99)
-c = random.randint(1, 99)
-d = random.randint(1, 99)
-e = random.randint(1, 99)
+count = 0       # outer loop
+count2 = 0      # inner loop
+a = random.randint(1, 100)
+b = random.randint(1, 100)
+c = random.randint(1, 100)
+d = random.randint(1, 100)
+e = random.randint(1, 100)
 winningNums = [a, b, c, d, e]
 userGuesses = [0,4]
 
@@ -36,12 +33,9 @@ print(winningNums) # printing only for testing
 for count in range (5):
     count += 1
     userNum = (input("Please enter your guess for lotto number " + str(count) + ": "))
-    
-    for count2 in range(10):
+    for count2 in range(9):
         count2 += 1
-    
-    if count == 1:
-        while True:
+        if count == 1:
             if userNum == a:
                 print("YOU HIT THE FIRST NUMBER!")
                 break
