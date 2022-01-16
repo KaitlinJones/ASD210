@@ -39,12 +39,10 @@ for count in range (5):
     
     for count2 in range(10):
         count2 += 1
+        
         if count == 1:
             if userNum == a:
                 print("YOU HIT THE FIRST NUMBER!")
-                break
-            elif count2 == maxGuesses:
-                userGuesses[0] == 0
                 break
             else: 
                 userNum = int(input("Take another guess: "))
@@ -86,4 +84,4 @@ for count in range (5):
               userNum = int(input("Take another guess: "))
 
 
-print("The winning numbers are:", winningNums, ".")
+print("The winning numbers are:", winningNums)
