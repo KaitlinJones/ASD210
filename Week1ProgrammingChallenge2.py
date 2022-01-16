@@ -28,10 +28,9 @@ userGuesses2 = []
 userGuesses3 = []
 userGuesses4 = []
 userGuesses5 = []
-print("Welcome to the lucky lotto! You will have 10 chances per number to guess 5 random numbers from 1 - 99. If you guess all 5 numbers correctly you win! Miss any of the 5 and you lose. Best of luck to you!\n\n")
+print("\nWelcome to the lucky lotto! You will have 10 chances per number to guess 5 random numbers from 1 - 99. If you guess all 5 numbers correctly you win! Miss any of the 5 and you lose. Best of luck to you!\n\n")
 
 print(winningNums) # printing only for testing
-
 
 for count in range (5):
     count += 1
@@ -89,6 +88,9 @@ for count in range (5):
               userNum = int(input("Take another guess: "))
               userGuesses5.append(userNum)
 
-
-print("The winning numbers are:", winningNums)
-print(userGuesses1, userGuesses2, userGuesses3, userGuesses4, userGuesses5)
+print("\nThe winning numbers are:", winningNums)
+print("\nYour guesses for lotto number 1 were:",userGuesses1)
+print("Your guesses for lotto number 2 were:", userGuesses2)
+print("Your guesses for lotto number 3 were:", userGuesses3)
+print("Your guesses for lotto number 4 were:", userGuesses4)
+print("Your guesses for lotto number 5 were:", userGuesses5)
