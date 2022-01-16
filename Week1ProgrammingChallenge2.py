@@ -32,7 +32,7 @@ print(winningNums) # printing only for testing
 
 for count in range (5):
     count += 1
-    userNum = (input("Please enter your guess for lotto number " + str(count) + ": "))
+    userNum = int(input("Please enter your guess for lotto number " + str(count) + ": "))
     for count2 in range(9):
         count2 += 1
         if count == 1:
