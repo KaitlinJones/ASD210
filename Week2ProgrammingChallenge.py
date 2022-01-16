@@ -15,6 +15,7 @@ When all cycles completed – you should have your WINNING numbers verified and 
 
 import random
 
+#initialization
 maxGuesses = 10
 count = 0       # outer loop
 count2 = 0      # inner loop
@@ -23,8 +24,8 @@ b = random.randint(1, 100)
 c = random.randint(1, 100)
 d = random.randint(1, 100)
 e = random.randint(1, 100)
-winningNums = [a, b, c, d, e]
-userGuesses1 = []
+winningNums = [a, b, c, d, e] #list to store random winning numbers
+userGuesses1 = []             #lists to store user's guesses
 userGuesses2 = []
 userGuesses3 = []
 userGuesses4 = []
@@ -33,21 +34,21 @@ print("\nWelcome to the lucky lotto! You will have 10 chances per number to gues
 
 print(winningNums) # printing only for testing
 
-for count in range (5):
+for count in range (5): # outer loop iterates five times for each number
     count += 1
     userNum = int(input("Please enter your guess for lotto number " + str(count) + ": "))
-    for count2 in range(10):
+    for count2 in range(10): # inner loop interates ten times for each guess 
         count2 += 1
         if count == 1:
             if userNum == a:
                 print("YOU HIT THE FIRST NUMBER!")
-                userGuesses1.append(userNum)
+                userGuesses1.append(userNum) # stores winning number to list
                 break
             elif count2 == maxGuesses:
                 break
             else: 
                 userNum = int(input("Take another guess: "))
-                userGuesses1.append(userNum)
+                userGuesses1.append(userNum) # stores losing number to lists
         if count == 2:
             if userNum == b:
                 print("YOU HIT THE SECOND NUMBER!")
