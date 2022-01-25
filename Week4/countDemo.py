@@ -5,7 +5,7 @@ class GuessingGame(EasyFrame):
     def __init__(self):
         EasyFrame.__init__(self, title = "Guessing  Game")
         # Initialize the instance variables for the data
-        self.myNumber = random.randint(1, 100)
+        
         self.count = 0
         # Create and add widgets to the window
         greeting = "Enter a number between 1 and 100."
