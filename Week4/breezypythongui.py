@@ -31,6 +31,7 @@ Python 2.x.x (updated 2-4-2013).
 """
 
 import sys
+from turtle import color
 versionNumber = sys.version_info.major
 if versionNumber == 3:
     import tkinter
@@ -811,7 +812,7 @@ class EasyDialog(tkSimpleDialog.Dialog):
     def addButton(self, master, text, row, column,
                   columnspan = 1, rowspan = 1,
                   command = lambda: None,
-                  state = NORMAL):
+                  state = NORMAL, background = color):
         """Creates and inserts a button at the row and column,
         and returns the button."""
         button = Tkinter.Button(master, text = text,
