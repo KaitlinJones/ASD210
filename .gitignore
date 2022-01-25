@@ -8,3 +8,4 @@ tester.py
 testPC1.py
 chapter4.py
 __pycache__/
+*.gif
