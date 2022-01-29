@@ -1,0 +1,11 @@
+fileName = input("Enter the file name: ")
+inputFile = open(fileName, 'r')
+
+print("%-12s%-10s" % ("Name", "Address"))
+for line in inputFile:
+    dataList = line.split()
+    name = dataList[0]
+    addressNUm = int(dataList[1])
+    addressStreet = dataList[2]
+    streetType = dataList[3]
+    print("%-12s%-5d%-12s%-3s" % (name, addressNUm, addressStreet, streetType))

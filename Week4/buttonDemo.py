@@ -1,6 +1,5 @@
 from breezypythongui import EasyFrame
 from tkinter import *
-
 class buttonDemo(EasyFrame):
     """Illustrartes command buttons and user events"""
     def __init__(self):

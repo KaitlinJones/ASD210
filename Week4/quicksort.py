@@ -1,36 +1,36 @@
-# This Function handles sorting part of quick sort
-# start and end points to first and last element of
-# an array respectively
-def partition(start, end, array):
-     
-    # Initializing pivot's index to start
-    pivot_index = start
-    pivot = array[pivot_index]
-     
-    # This loop runs till start pointer crosses
-    # end pointer, and when it does we swap the
-    # pivot with element on end pointer
-    while start < end:
-         
-        # Increment the start pointer till it finds an
-        # element greater than  pivot
-        while start < len(array) and array[start] <= pivot:
-            start += 1
-             
-        # Decrement the end pointer till it finds an
-        # element less than pivot
-        while array[end] > pivot:
-            end -= 1
-         
-        # If start and end have not crossed each other,
-        # swap the numbers on start and end
-        if(start < end):
-            array[start], array[end] = array[end], array[start]
-     
-animals = ["aardvark", "zebra", "giraffe","baboon","penguin","puppy" ,"rhinosaurus","elephant","gorilla","lion","tiger","bear"]
 
-def partition(start, end, array)
+
+def partition(start, end, lyst):
     i = start               # set the pivot index to start
-    pivot = 
+    pivot = lyst[i]
 
-while 
+    while start < end:                                      # This loop runs till start pointer crosses
+                                                            # end pointer, and when it does we swap the
+                                                            # pivot with element on end pointer
+        while start < len(lyst) and lyst[start] <= pivot:
+            start += 1                      # increment the start until it finds an element > pivot
+        while lyst[end] > pivot:
+            end -= 1                        # decrement the end until it finds an element < pivot
+        if(start < end):
+            lyst[start], lyst[end] = lyst[end], lyst[start] # swap the elements on start and end 
+                                                            # if they have not crossed each other
+    
+    lyst[end], lyst[i] = lyst[i], lyst[end]         # swap the end element with the pivot element; this 
+                                                    # puts the pivot element in its correct position
+    
+    return end      # Returning end pointer to divide the array into 2
+
+def quickSort(start, end, lyst): # utilizes partition and calls itself to recursively complete the sort
+
+    if start < end:
+        p = partition(start, end, lyst)     # p is partitioning index, array[p] is at right place
+        quickSort(start, p - 1, lyst)       # sort elements before partition 
+        quickSort(p + 1, end, lyst)         # sort elements after the partition
+    
+def main():
+    animals = ["aardvark", "zebra", "giraffe","baboon","penguin","puppy" ,"rhinosaurus","elephant","gorilla","lion","tiger","bear"]
+    quickSort(0, len(animals) - 1, animals)
+    print("The sorted list is:", animals)
+
+if __name__ == "__main__":
+    main()

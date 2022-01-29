@@ -1,6 +1,5 @@
 from breezypythongui import EasyFrame
 import tkinter.filedialog
-
 class TextEditor(EasyFrame):
     pass
 
