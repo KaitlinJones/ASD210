@@ -31,12 +31,13 @@ def main():
     image = Image(filename)
     grayscale1(image)
     image.draw()
-    newImage = image.clone()
+    newImage = image.clone()                    #clone image to apply grayscale2()
     grayscale2(newImage)
     newImage.draw()
-    choice = input("Would you like to open a new file? Enter 'y' for yes or press 'q' to exit: ")
-    if choice != 'q':
-        main()
+    
+    choice = input("Would you like to open a new file? Enter 'y' for yes or press 'q' to exit: ")  # loop to allow for opening 
+    if choice != 'q':                                                                              # another file or exiting the 
+        main()                                                                                     # program
    
 if __name__ == "__main__":
    main()
