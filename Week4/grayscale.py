@@ -34,9 +34,9 @@ def main():
     newImage = image.clone()
     grayscale2(newImage)
     newImage.draw()
-
-    
-    
-    
+    choice = input("Would you like to open a new file? Enter 'y' for yes or press 'q' to exit: ")
+    if choice != 'q':
+        main()
+   
 if __name__ == "__main__":
    main()
